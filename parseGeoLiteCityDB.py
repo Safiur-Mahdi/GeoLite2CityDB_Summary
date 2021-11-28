@@ -37,7 +37,7 @@ def updateMostViewedPageDic(originalDic):
         for currkey, currVal in originalDic.items():
             updatedKey = currkey.split('__ADDED__')[1]
             thePath = currkey.split('__ADDED__')[0]
-            updatedVal = thePath + '__TOTAL#VIEW__' + str(currVal) # using _css_ since we know the path can not have "css" 
+            updatedVal = thePath + '__TOTAL#VIEW__' + str(currVal) 
             for k,v in tempDic.items():
                 if updatedKey == k.split('__ADDED__')[1]:
                     if v > currVal:
