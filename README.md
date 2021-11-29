@@ -5,7 +5,8 @@ Thank you for giving me the opportunity to solve the MaxMind coding challenge, I
 3. I printed the output both in console and Html file (open automatically if GUI supports).
 4. With the most viewed page, I also printed the #viewCount.
 5. In the assignment question, it says "Ignore all requests for images", and in the access.log file, I found there are many requests starting "/images/...." such as "/images/ratings/blue-4-00.png", and if I filter with the given "/[a-f0-9]+/images/" since "+" represents "1 or more", all the request for images could not be ignored. So, I changed the regular expression pattern to  "/[a-f0-9]*/images/" where "\*" represents "0 or more" so that I can ignore all requests for images.
-6. I also printed the total execution time with different access.log files. I also uploaded the different log files.
+6. I also printed the total execution time with different access.log files. 
+7. I uploaded the different log files if needed.
 
 How to run the code:
 ========================
