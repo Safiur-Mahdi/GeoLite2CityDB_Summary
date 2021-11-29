@@ -64,13 +64,15 @@ def showOutput():
         outFileName = 'summary.html'
         Title = 'MaxMind :: GeoLite2 City database summary'
         HeaderCountry = 'Most Viewed Country:'
+        consoleOutputCountry = 'Most Viewed Country:\n'
         HeaderStates = 'Most Viewed US States:'
+        consoleOutputStates = 'Most Viewed US States:\n'
         recordsToRetrieve = 10 if len(countryAndMostviewDic) >=10 else len(countryAndMostviewDic)
         outputFile = open(outFileName, 'w')
         
         #generating country summary
         bodyOfCountry = 'Country :: #Most View :: "The most viewed page" (#viewCount)<br>'
-        consoleOutputCountry = 'Country :: #Most View :: "The most viewed page" (#viewCount)\n'
+        consoleOutputCountry += 'Country :: #Most View :: "The most viewed page" (#viewCount)\n'
         bodyOfCountry += "===============================================<br>"
         consoleOutputCountry += "============================================================\n"
         countryItems = countryAndMostviewDic.items() # get a list of (key, value)
@@ -82,7 +84,7 @@ def showOutput():
         
         #generating US states summary 
         bodyOfStates = 'States :: #Most View :: "The most viewed page" (#viewCount)<br>'
-        consoleOutputStates = 'States :: #Most View :: "The most viewed page" (#viewCount)\n'
+        consoleOutputStates += 'States :: #Most View :: "The most viewed page" (#viewCount)\n'
         bodyOfStates += "=============================================<br>"
         consoleOutputStates += "============================================================\n"
         statesItems = USStatesAndMostviewDic.items() # get a list of (key, value)
