@@ -2,11 +2,11 @@ Thank you for giving me the opportunity to solve the MaxMind coding challenge, I
 
 1. I implemented the coding challenge using Python3 (3.8.10).
 2. I utilized functional programming to solve the problem and followed the best current coding practices. However, the code can easily be extended to follow any other design techniques such as OOP/MVC.
-3. I printed the output both in console and Html file (open automatically if GUI supports).
+3. I printed the output both in console and Html file (named "summary.html", open automatically if GUI supports).
 4. With the most viewed page, I also printed the #viewCount.
 5. In the assignment question, it says "Ignore all requests for images", and in the access.log file, I found there are many requests starting "/images/...." such as "/images/ratings/blue-4-00.png", and if I filter with the given "/[a-f0-9]+/images/" since "+" represents "1 or more", all the request for images could not be ignored. So, I changed the regular expression pattern to  "/[a-f0-9]*/images/" where "\*" represents "0 or more" so that I can ignore all requests for images.
-6. I also printed the total execution time with different access.log files. 
-7. I uploaded the different log files if needed.
+6. Along with the expected output, I printed a summary with number of valid IP processed, Unknown country list, number of unknown state, and the total execution. 
+7. I experimented with different log files varying number of lines. I also uploaded the different log files if needed.
 
 How to run the code:
 ========================
