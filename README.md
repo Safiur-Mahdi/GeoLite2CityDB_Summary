@@ -1,4 +1,4 @@
-Thank you for giving me opportunity to solve the MaxMind coding challenge, I really enjoyed while solving the problem!
+Thank you for giving me opportunity to solve the MaxMind coding challenge, I really enjoyed while solving the problem.
 
 1. I implemented the coding challenge using Python3 (3.8.10).
 2. I utilized functional programing to solve the problem and followed best current practices. However, the code can easily be extend to follow any other programming techniques such as OOP/MVC.
@@ -166,3 +166,14 @@ Please provide ONLY the 'access.log' file as the first argument.<br><br>
 3. Typo while executing the command (spelling mistake of the access.log file):<br>
 ubuntu@ip-172-31-45-47:~/maxmind$ python3 parseGeoLiteCityDB.py access_500linesOnly.log GeoLite2-City.mmdbasdfasdf
 Please provide ONLY the 'access.log' file as the first argument.
+
+Dependencies
+=============
+I imported the following modules:<br><br>
+import re<br>
+import sys<br>
+import time<br>
+import os.path<br>
+import webbrowser<br>
+import geoip2.database<br><br>
+Generally, all the above modules comes with the installing of Python3 and geoip2<br>
