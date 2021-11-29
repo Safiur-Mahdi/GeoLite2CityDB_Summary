@@ -1,35 +1,36 @@
-Thank you for giving me opportunity to solve the MaxMind coding challenge, I really enjoyed while solving the problem.
+Thank you for giving me the opportunity to solve the MaxMind coding challenge, I really enjoyed while solving the problem.
 
 1. I implemented the coding challenge using Python3 (3.8.10).
-2. I utilized functional programing to solve the problem and followed best current practices. However, the code can easily be extend to follow any other programming techniques such as OOP/MVC.
-3. I printed the output both in console and html file(open automatically).
+2. I utilized functional programming to solve the problem and followed the best current coding practices. However, the code can easily be extended to follow any other design techniques such as OOP/MVC.
+3. I printed the output both in console and Html file (open automatically if GUI supports).
 4. With the most viewed page, I also printed the #viewCount.
-5. In the assignment question, it says "Ignore all requests for images", and in the access.log file, I found there are many request starting "/images/...." such as "/images/ratings/blue-4-00.png", and if I filter with the given "/[a-f0-9]+/images/" since "+" represents "1 or more", all the request for images could not be ignored. So, I changed the regular expression pattern to  "/[a-f0-9]*/images/" where "\*" represents "0 or more" so that I can ignore all requests for images.
-6. I also printed the total execution time with different access.log file. Please find the different log files here: https://drive.google.com/drive/folders/1tXbwB1UG53xaF1KmAibXuWM7LOLDfNrW?usp=sharing
-7. Due to time constraints, I could not address any unit testing.
+5. In the assignment question, it says "Ignore all requests for images", and in the access.log file, I found there are many requests starting "/images/...." such as "/images/ratings/blue-4-00.png", and if I filter with the given "/[a-f0-9]+/images/" since "+" represents "1 or more", all the request for images could not be ignored. So, I changed the regular expression pattern to  "/[a-f0-9]*/images/" where "\*" represents "0 or more" so that I can ignore all requests for images.
+6. I also printed the total execution time with different access.log files. Please find the different log files here: https://drive.google.com/drive/folders/1tXbwB1UG53xaF1KmAibXuWM7LOLDfNrW?usp=sharing
 
 How to run the code:
 ========================
-On a standard Ubuntu system (Ubuntu 20.04 or less), at first we need to check whether python is already installed or not:<br>
+On a standard Ubuntu system (Ubuntu 20.04 or less), at first, we need to check whether Python is already installed or not:<br>
 
-Ubuntu version 20.04: python3 --version<br> 
-Previous versions: python --version<br>
+Ubuntu version 20.04:<br>
+python3 --version<br><br> 
+Prior Ubuntu versions:<br>
+python --version<br>
 
-If python3 is not installed, please run following commands:<br>
+If python3 is not installed, please run the following commands:<br>
 sudo apt-get update<br>
 sudo apt-get install python3<br>
 Reference: https://www.makeuseof.com/install-python-ubuntu/<br>
 
-Once, python3 is installed, we need to install "geoip2" module by following command:<br>
- 
+Once, python3 is installed, we need to install the "geoip2" module by following command:<br>
+ 
 pip install geoip2<br>
 
 Reference: https://pypi.org/project/geoip2/<br>
 
-If pip (Pip Install Packages) is not installed, please execute following command:<br>
+If pip (Pip Install Packages) is not installed, please execute the following command:<br>
 sudo apt install python3-pip<br>
 
-We are now ready to run the code by following command (Ubuntu 20.04):<br>
+We are now ready to run the code by the following command (Ubuntu 20.04):<br>
 python3 parseGeoLiteCityDB.py access.log<br>
 
 For prior Ubuntu version:<br>
@@ -40,10 +41,11 @@ Files needed to run the program:
 1. access.log<br>
 2. GeoLite2-City.mmdb<br>
 
-Both of the files need to be present in the same directory where parseGeoLiteCityDB.py is located. <br>
-While executing the run command (python3 parseGeoLiteCityDB.py access.log), we can use different log files to get different outputs.<br>
-If you want to try a different database, please change the variable name in line no. 15 in the code.<br>
-I can code in such way so that we can have both (access.log file and database file) as an input, however, since the homework question says "Include a command-line program to run your code against an arbitrary file", I limited the input argument to only access.log file.<br>
+Both of the files need to be present in the same directory where parseGeoLiteCityDB.py is located. <br><br>
+While executing the run command (python3 parseGeoLiteCityDB.py access.log), we can use different log files to get different outputs.<br><br>
+If you want to try a different database, please change the variable name in line no. 15 in the code.<br><br>
+I can code in such a way so that we can have both (access.log file and database file) as an input, however, since the homework question says "Include a command-line program to run your code against an arbitrary file", I limited the input argument to only access.log file.<br><br>
+If needed, please download the "GeoLite2-City.mmdb" from here: https://drive.google.com/drive/folders/1Squ0xtr2QCDPoGq6TyIkS-_0HjA2yMib?usp=sharing
 
 Sample Outputs:
 ==================
@@ -86,7 +88,7 @@ Unknown states found: 790<br>
 
 Total execution time: 13.11 seconds.<br>
 
-I also experimented with altered access.log file, at first reducing the total number of line by half, and then only having first 500 lines. So my code handle the situation correctly: "where there are less than 10 states or countries with visitors, only show those which have at least one visitor". Corresponding outputs: <br><br>
+I also experimented with an altered access.log file, at first reducing the total number of lines by half, and then only having the first 500 lines. So my code handles the situation correctly: "where there are less than 10 states or countries with visitors, only show those which have at least one visitor". Corresponding outputs: <br><br>
 
 Output 2:
 =========
@@ -182,14 +184,14 @@ import time<br>
 import os.path<br>
 import webbrowser<br>
 import geoip2.database<br><br>
-Generally, all the above modules comes with the installing of Python3 and geoip2<br>
+Generally, all the above modules come with the installing of Python3 and geoip2<br>
 
 Addressing Evaluation criteria:
 ===============================
-My code supports all of the evaluation criteria. Here are some of the point I want ot emphasize:<br>
-1. I divided every possible subtasks to a different funciton to understand the code easily
+My code supports all of the evaluation criteria. Here are some of the points I want to emphasize:<br>
+1. I divided every possible subtask to a different function to understand the code easily
 2. I provided necessary comments where necessary
-3. The code is written in a modern style for the language: I used f-Strings, \_\_name\_\_, dictionary etc.
+3. The code is written in a modern style for the language: I used f-Strings, \_\_name\_\_, dictionary, etc.
 4. I handled all the possible exceptions using Python "Try, except, else"
 
 Addressing Bonus Points:
