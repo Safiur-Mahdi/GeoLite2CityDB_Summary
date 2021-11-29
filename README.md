@@ -5,7 +5,7 @@ Thank you for giving me the opportunity to solve the MaxMind coding challenge, I
 3. I printed the output both in console and Html file (open automatically if GUI supports).
 4. With the most viewed page, I also printed the #viewCount.
 5. In the assignment question, it says "Ignore all requests for images", and in the access.log file, I found there are many requests starting "/images/...." such as "/images/ratings/blue-4-00.png", and if I filter with the given "/[a-f0-9]+/images/" since "+" represents "1 or more", all the request for images could not be ignored. So, I changed the regular expression pattern to  "/[a-f0-9]*/images/" where "\*" represents "0 or more" so that I can ignore all requests for images.
-6. I also printed the total execution time with different access.log files. Please find the different log files here: https://drive.google.com/drive/folders/1tXbwB1UG53xaF1KmAibXuWM7LOLDfNrW?usp=sharing
+6. I also printed the total execution time with different access.log files. I also uploaded the different log files.
 
 How to run the code:
 ========================
@@ -52,6 +52,7 @@ Sample Outputs:
 Output 1:
 =========
 ubuntu@ip-172-31-45-47:~/maxmind$ python3 parseGeoLiteCityDB.py access.log<br><br>
+Most Viewed Country:<br>
 Country :: #Most View :: "The most viewed page" (#viewCount)<br>
 ============================================================<br>
 United States :: 13905 :: "/region/1" (61)<br>
@@ -65,6 +66,7 @@ Canada :: 221 :: "/entry/6843" (3)<br>
 Mexico :: 120 :: "/region/1" (2)<br>
 Israel :: 66 :: "/site/recent.atom?entries_only=1" (11)<br><br>
 
+Most Viewed US States:<br>
 States :: #Most View :: "The most viewed page" (#viewCount)<br>
 ============================================================<br>
 Washington :: 2400 :: "/region/1" (17)<br>
@@ -94,6 +96,7 @@ Output 2:
 =========
 Using 25037 lines of access.log file:<br>
 ubuntu@ip-172-31-45-47:~/maxmind$ python3 parseGeoLiteCityDB.py access_half.log<br>
+Most Viewed Country:<br>
 Country :: #Most View :: "The most viewed page" (#viewCount)<br>
 ============================================================<br>
 United States :: 13905 :: "/region/1" (61)<br>
@@ -107,6 +110,7 @@ Canada :: 221 :: "/entry/6843" (3)<br>
 Mexico :: 120 :: "/region/1" (2)<br>
 Israel :: 66 :: "/site/recent.atom?entries_only=1" (11)<br>
 
+Most Viewed US States:<br>
 States :: #Most View :: "The most viewed page" (#viewCount)<br>
 ============================================================<br>
 Washington :: 2400 :: "/region/1" (17)<br>
@@ -134,6 +138,7 @@ Output 3:
 =========
 Using only first 500 lines of access.log file:<br>
 ubuntu@ip-172-31-45-47:~/maxmind$ python3 parseGeoLiteCityDB.py access_500linesOnly.log<br>
+Most Viewed Country:<br>
 Country :: #Most View :: "The most viewed page" (#viewCount)<br>
 ============================================================<br>
 United States :: 162 :: "/entry/5023" (3)<br>
@@ -145,6 +150,7 @@ France :: 3 :: "/entry/656" (1)<br>
 Canada :: 2 :: "/entry/2708" (1)<br>
 Israel :: 1 :: "/site/recent.atom?entries_only=1" (1)<br>
 
+Most Viewed US States:<br>
 States :: #Most View :: "The most viewed page" (#viewCount)<br>
 ============================================================<br>
 Washington :: 41 :: "/entry/1817" (1)<br>
