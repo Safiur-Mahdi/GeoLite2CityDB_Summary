@@ -5,7 +5,7 @@ Thank you for giving me opportunity to solve the MaxMind coding challenge, I rea
 3. I printed the output both in console and html file(open automatically).
 4. With the most viewed page, I also printed the #viewCount.
 5. In the assignment question, it says "Ignore all requests for images", and in the access.log file, I found there are many request starting "/images/...." such as "/images/ratings/blue-4-00.png", and if I filter with the given "/[a-f0-9]+/images/" since "+" represents "1 or more", all the request for images could not be ignored. So, I changed the regular expression pattern to  "/[a-f0-9]*/images/" where "\*" represents "0 or more" so that I can ignore all requests for images.
-6. I also printed the total execution time with different access.log file.
+6. I also printed the total execution time with different access.log file. I also uploaded the different access.log files.
 7. Due to time constraints, I could not address any unit testing.
 
 How to run the code:
@@ -47,6 +47,8 @@ I can code in such way so that we can have both (access.log file and database fi
 
 Sample Outputs:
 ==================
+Output 1:
+=========
 ubuntu@ip-172-31-45-47:~/maxmind$ python3 parseGeoLiteCityDB.py access.log<br><br>
 Country :: #Most View :: "The most viewed page" (#viewCount)<br>
 ============================================================<br>
@@ -84,7 +86,10 @@ Unknown states found: 790<br>
 
 Total execution time: 13.11 seconds.<br>
 
-I also experimented with altered access.log file, at first reducing the total number of line by half, and then only having first 500 lines. So my code handle the situation correctly: "where there are less than 10 states or countries with visitors, only show those which have at least one visitor". Corresponding outputs: <br>
+I also experimented with altered access.log file, at first reducing the total number of line by half, and then only having first 500 lines. So my code handle the situation correctly: "where there are less than 10 states or countries with visitors, only show those which have at least one visitor". Corresponding outputs: <br><br>
+
+Output 2:
+=========
 Using 25037 lines of access.log file:<br>
 ubuntu@ip-172-31-45-47:~/maxmind$ python3 parseGeoLiteCityDB.py access_half.log<br>
 Country :: #Most View :: "The most viewed page" (#viewCount)<br>
@@ -123,7 +128,8 @@ Unknown states found: 790<br>
 
 Total execution time: 13.06 seconds.<br>
 
-
+Output 3:
+=========
 Using only first 500 lines of access.log file:<br>
 ubuntu@ip-172-31-45-47:~/maxmind$ python3 parseGeoLiteCityDB.py access_500linesOnly.log<br>
 Country :: #Most View :: "The most viewed page" (#viewCount)<br>
@@ -177,3 +183,16 @@ import os.path<br>
 import webbrowser<br>
 import geoip2.database<br><br>
 Generally, all the above modules comes with the installing of Python3 and geoip2<br>
+
+Addressing Evaluation criteria:
+===============================
+My code supports all of the evaluation criteria. Here are some of the point I want ot emphasize:<br>
+1. I divided every possible subtasks to a different funciton to understand the code easily
+2. I provided necessary comments where necessary
+3. The code is written in a modern style for the language: I used f-Strings, \_\_name\_\_, dictionary etc.
+4. I handled all the possible exceptions using Python "Try, except, else"
+
+Addressing Bonus Points:
+===============================
+1. I wrote the API documentation clearly in the code. 
+2. I did the functional tests. Due to time constraints, I could not write the unit tests.
