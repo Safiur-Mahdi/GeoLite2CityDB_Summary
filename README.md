@@ -1,6 +1,6 @@
 Thank you for giving me opportunity to solve the MaxMind coding challenge, I really enjoyed while solving the problem!
 
-I implemented the coding challenge using Python3 (3.8.10)
+I implemented the coding challenge using Python3 (3.8.10).
 I utilized functional programing to solve the problem and followed best current practices. However, the code can easily be extend to follow any other programming techniques such as OOP/MVC.
 I printed the output both in console and html file(open automatically).
 With the most viewed page, I also printed the #viewCount
