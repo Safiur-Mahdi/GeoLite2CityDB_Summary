@@ -6,8 +6,8 @@ Thank you for giving me the opportunity to solve the MaxMind coding challenge, I
 4. With the most viewed page, I also printed the #viewCount.
 5. My code works perfectly if there are less than 10 states or countries with visitors.
 6. In the assignment question, it says "Ignore all requests for images", and in the access.log file, I found there are many requests starting "/images/...." such as "/images/ratings/blue-4-00.png", and if I filter with the given "/[a-f0-9]+/images/" since "+" represents "1 or more", all the request for images could not be ignored. So, I changed the regular expression pattern to  "/[a-f0-9]*/images/" where "\*" represents "0 or more" so that I can ignore all requests for images.
-7. Along with the expected output, I printed a summary with number of valid IP processed, Unknown Country list, number of Unknown State, and the total execution. 
-8. I experimented with different log files varying number of lines. I also uploaded the different log files if needed.
+7. Along with the expected output, I printed a summary with number of valid IP processed, Unknown Country list, number of Unknown State, and the total execution time in seconds. 
+8. I experimented with different log files varying number of lines. I also uploaded the different log files (if needed).
 
 How to run the code:
 ========================
@@ -101,40 +101,40 @@ ubuntu@ip-172-31-45-47:~/maxmind$ python3 parseGeoLiteCityDB.py access_half.log<
 Most Viewed Country:<br>
 Country :: #Most View :: "The most viewed page" (#viewCount)<br>
 ============================================================<br>
-United States :: 13905 :: "/region/1" (61)<br>
-Netherlands :: 3216 :: "/search/by-lat-long/9.250043,-83.859123/filter/category_id=1;category_id=2;category_id=3;category_id=4;category_id=5;category_id=6;category_id=7;category_id=8;category_id=9?limit=10;unit=km;distance=10" (11)<br>
-China :: 1466 :: "/entry/" (9)<br>
-Germany :: 1244 :: "/entry/20252" (26)<br>
-France :: 702 :: "/entry/2299" (4)<br>
-Russia :: 658 :: "/region/659" (3)<br>
-United Kingdom :: 304 :: "/region/52" (7)<br>
-Canada :: 221 :: "/entry/6843" (3)<br>
-Mexico :: 120 :: "/region/1" (2)<br>
-Israel :: 66 :: "/site/recent.atom?entries_only=1" (11)<br>
+United States :: 5844 :: "/region/1" (36)<br>
+Netherlands :: 1272 :: "/search/by-lat-long/53.214297,-1.738481/filter/category_id=1;category_id=2;category_id=3;category_id=4;category_id=5;category_id=6;category_id=7;category_id=8;category_id=9?limit=10;unit=km;distance=10" (4)<br>
+China :: 815 :: "/site/help" (8)<br>
+Germany :: 531 :: "/entry/20252" (16)<br>
+United Kingdom :: 245 :: "/region/659" (6)<br>
+Russia :: 189 :: "/site/help" (2)<br>
+France :: 186 :: "/entry/2299" (3)<br>
+Mexico :: 104 :: "/region/1" (2)<br>
+Canada :: 34 :: "/entry/3613" (2)<br>
+Israel :: 25 :: "/site/recent.atom?entries_only=1" (4)<br>
 
 Most Viewed US States:<br>
 States :: #Most View :: "The most viewed page" (#viewCount)<br>
 ============================================================<br>
-Washington :: 2400 :: "/region/1" (17)<br>
-Virginia :: 2278 :: "/entry/4628" (8)<br>
-California :: 410 :: "/location/most_recent_vendors.rss?location_id=5" (22)<br>
-New York :: 174 :: "/region/1" (5)<br>
-Delaware :: 171 :: "/region/1503" (2)<br>
-Michigan :: 153 :: "/region/447" (2)<br>
-Texas :: 152 :: "/region/218" (10)<br>
-Minnesota :: 131 :: "/region/13" (21)<br>
-Illinois :: 116 :: "/region/1766" (4)<br>
-New Jersey :: 96 :: "/entry/near/40.7458%2C-74.0321/filter/category_id=1;veg_level=2;allow_closed=0?limit=10;order_by=distance;address=Your+location" (4)<br>
+Washington :: 1070 :: "/region/1" (12)<br>
+Virginia :: 439 :: "/entry/20253/reviews" (5)<br>
+California :: 191 :: "/location/most_recent_vendors.rss?location_id=5" (10)<br>
+New York :: 84 :: "/region/1" (3)<br>
+Illinois :: 82 :: "/region/1766" (4)<br>
+Texas :: 72 :: "/region/218" (6)<br>
+Ohio :: 70 :: "/entry/5023" (3)<br>
+Pennsylvania :: 70 :: "/region/599" (3)<br>
+Minnesota :: 60 :: "/region/13" (18)<br>
+Florida :: 51 :: "/api-explorer/" (4)<br>
 
 Summary:<br>
-Total valid IP processed: 22454<br>
+Total valid IP processed: 9506<br>
 
-Unknown Country list: (total 3)<br>
-['193.202.255.201', '66.249.93.72', '66.249.81.72']<br>
+Unknown Country list: (total 2)<br>
+['193.202.255.201', '66.249.93.72']<br>
 
-Unknown states found: 790<br>
+Unknown states found: 487<br>
 
-Total execution time: 13.06 seconds.<br>
+Total execution time: 4.86 seconds.<br>
 
 Output 3:
 =========
