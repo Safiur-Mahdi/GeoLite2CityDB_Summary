@@ -1,13 +1,3 @@
-Thank you for giving me the opportunity to solve the MaxMind coding challenge, I really enjoyed while solving the problem.
-
-1. I implemented the coding challenge using Python3 (3.8.10).
-2. I utilized functional programming to solve the problem and followed the best current coding practices. However, the code can easily be extended to follow any other design techniques such as OOP/MVC.
-3. I printed the output both in console and Html file (named "summary.html", open automatically if GUI supports).
-4. With the most viewed page, I also printed the #viewCount.
-5. My code works perfectly if there are less than 10 states or countries with visitors.
-6. In the assignment question, it says "Ignore all requests for images", and in the access.log file, I found there are many requests starting "/images/...." such as "/images/ratings/blue-4-00.png", and if I filter with the given "/[a-f0-9]+/images/" since "+" represents "1 or more", all the request for images could not be ignored. So, I changed the regular expression pattern to  "/[a-f0-9]*/images/" where "\*" represents "0 or more" so that I can ignore all requests for images.
-7. Along with the expected output, I printed a summary with number of valid IP processed, Unknown Country list, number of Unknown State, and the total execution time in seconds. 
-8. I experimented with different log files varying number of lines. I also uploaded the different log files (if needed).
 
 How to run the code:
 ========================
@@ -194,15 +184,4 @@ import webbrowser<br>
 import geoip2.database<br><br>
 Generally, all the above modules come with the installing of Python3 and geoip2<br>
 
-Addressing Evaluation criteria:
-===============================
-My code supports all of the evaluation criteria. Here are some of the points I want to emphasize:<br>
-1. I divided every possible subtask to a different function to understand the code easily
-2. I provided necessary comments where necessary
-3. The code is written in a modern style for the language: I used f-Strings, \_\_name\_\_, dictionary, etc.
-4. I handled all the possible exceptions using Python "Try, except, else"
-
-Addressing Bonus Points:
-===============================
-1. I wrote the API documentation clearly in the code. 
-2. I did the functional tests. Due to time constraints, I could not write the unit tests.
+Reference: https://dev.maxmind.com/geoip/geolite2-free-geolocation-data?lang=en
