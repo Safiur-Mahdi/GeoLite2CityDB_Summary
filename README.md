@@ -15,8 +15,6 @@ Once, python3 is installed, we need to install the "geoip2" module by following 
  
 pip install geoip2 [1]<br>
 
-Reference: https://pypi.org/project/geoip2/<br>
-
 If pip (Pip Install Packages) is not installed, please execute the following command:<br>
 sudo apt install python3-pip<br>
 
@@ -182,6 +180,6 @@ import webbrowser<br>
 import geoip2.database<br><br>
 Generally, all the above modules come with the installing of Python3 and geoip2<br>
 
-References:
+References:<br>
 [1] https://www.makeuseof.com/install-python-ubuntu/<br>
 [2] https://dev.maxmind.com/geoip/geolite2-free-geolocation-data?lang=en
