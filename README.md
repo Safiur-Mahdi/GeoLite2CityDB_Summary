@@ -37,7 +37,7 @@ Both of the files need to be present in the same directory where parseGeoLiteCit
 While executing the run command (python3 parseGeoLiteCityDB.py access.log), we can use different log files to get different outputs.<br><br>
 If you want to try a different database, please change the variable name in line no. 15 in the code.<br><br>
 I can code in such a way so that we can have both (access.log file and database file) as an input, however, since the homework question says "Include a command-line program to run your code against an arbitrary file", I limited the input argument to only access.log file.<br><br>
-If needed, please download the "GeoLite2-City.mmdb" from here: https://drive.google.com/drive/folders/1Squ0xtr2QCDPoGq6TyIkS-_0HjA2yMib?usp=sharing
+If needed, please download the "GeoLite2-City.mmdb" from here: https://drive.google.com/drive/folders/1Squ0xtr2QCDPoGq6TyIkS-_0HjA2yMib?usp=sharing [1]
 
 Sample Outputs:
 ==================
@@ -184,4 +184,5 @@ import webbrowser<br>
 import geoip2.database<br><br>
 Generally, all the above modules come with the installing of Python3 and geoip2<br>
 
-Reference: https://dev.maxmind.com/geoip/geolite2-free-geolocation-data?lang=en
+Reference:
+[1] https://dev.maxmind.com/geoip/geolite2-free-geolocation-data?lang=en
